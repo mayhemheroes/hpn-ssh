@@ -1,0 +1,8 @@
+project: hpn-ssh
+target: sshsig_fuzz
+cmds:
+  - cmd: /mayhem/sshsig_fuzz
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sshsig_fuzz/testsuite

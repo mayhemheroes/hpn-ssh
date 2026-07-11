@@ -1,0 +1,9 @@
+project: hpn-ssh
+target: privkey_fuzz
+cmds:
+  - cmd: /mayhem/privkey_fuzz
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/privkey_fuzz.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/privkey_fuzz/testsuite
